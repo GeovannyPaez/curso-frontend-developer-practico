@@ -119,9 +119,7 @@
     }
     // hacemos delpoy a los productos con la funcion runArrayProduct()
     runArrayPruduct(listaProducts);
-    // 
-    
-    
+
     // funcion que le añade un evento a cada card product y una vez le de click esta misma muestra su info del producto
     const addProductToCarAside= ()=>{
         const idProduct = asideProductDetail.getAttribute('id');
@@ -158,8 +156,6 @@
         priceTotalOfProductsInTheCar();
         deleteProducOfCar();
     }
-   
-    
 
     //funcion para agregar el evento al button de añadir los productos al carrito de compras 
     let ButtonsProductToCarOfProducts= document.querySelectorAll('.button-AddToCarOfProducts');
@@ -173,7 +169,8 @@
                     });
             }
     }
-    addProductToCarOfProducts(ButtonsProductToCarOfProducts);butnAddProductToCart.addEventListener('click',addProductToCarAside);
+    addProductToCarOfProducts(ButtonsProductToCarOfProducts);
+    butnAddProductToCart.addEventListener('click',addProductToCarAside);
 
     const ifHasProductosInCard=()=>{
         const parentOrderCount= document.querySelector('.my-order-content');
@@ -201,20 +198,20 @@
     const priceTotalOfProductsInTheCar=()=>{
         const priceTotalOfProducts= document.querySelector('.totalPriceProductOfTheCar');
         if(ifHasProductosInCard()){
-        const priceOfProduct=document.querySelectorAll('.priceOfProductCar');
+            const priceOfProduct=document.querySelectorAll('.priceOfProductCar');
         
         
-        let listPrecio = [];
-        for (const pricee of priceOfProduct) {
-            let precio=parseInt(pricee.textContent);
-            listPrecio.push(precio);
+            let listPrecio = [];
+            for (const pricee of priceOfProduct) {
+                let precio=parseInt(pricee.textContent);
+                listPrecio.push(precio);
+            }
+            const total = listPrecio.reduce((a,b)=> a+b ,0);
+        // console.log(total,priceOfProduct,listPrecio,priceTotalOfProducts);
+            priceTotalOfProducts.textContent=`$ ${total}`;
+        }else{
+            priceTotalOfProducts.textContent= '0';
         }
-        const total = listPrecio.reduce((a,b)=> a+b ,0);
-        console.log(total,priceOfProduct,listPrecio,priceTotalOfProducts);
-        priceTotalOfProducts.textContent=`$ ${total}`;
-    }else{
-        priceTotalOfProducts.textContent= '0';
-    }
 }
 
 

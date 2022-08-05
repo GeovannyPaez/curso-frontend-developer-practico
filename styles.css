@@ -251,6 +251,12 @@ nav {
   font-size: var(--md);
   font-weight: bold;
   height: 50px;
+  transition: all .3s ease-in-out;
+}
+.product-detail .primary-button:hover{
+  background-color: rgb(218, 218, 218);
+  color: var(--hospital-green);
+  transform: scale(1.05);
 }
 .btnDelteProdut{
   transition: transform 0.3s ease-in;
@@ -355,6 +361,10 @@ nav {
   border-radius: 20px;
   object-fit: contain;
   cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+.product-card img:hover{
+  transform: scale(1.1);
 }
 .product-info {
   display: flex;
@@ -370,7 +380,12 @@ nav {
   width: 35px;
   height: 35px;
   cursor: pointer;
+  transition: trasnform .3s ease-in;
 }
+.product-info figure img:hover{
+  transform: scale(1.1);
+}
+
 
 .product-info div p:nth-child(1) {
   font-weight: bold;
