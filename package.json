@@ -1,0 +1,15 @@
+{
+  "name": "curso-frontend-developer-javascript-practico",
+  "version": "1.0.0",
+  "description": "\"\"\u001b[D\": proyecto Open source del curso practico de javaScritp de platzi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:GeovannyPaez/curso-frontend-developer-practico.git"
+  },
+  "author": "Geovanny Paez",
+  "license": "MIT"
+}
